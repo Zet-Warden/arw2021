@@ -2,7 +2,7 @@ const app = require('express')();
 require('dotenv').config();
 
 app.get('/', (req, res) => {
-    res.send('dingledong');
+    res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 });
 
 const port = process.env.PORT || 3000;
