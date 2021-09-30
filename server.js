@@ -46,6 +46,12 @@ app.get("/main", async (req, res) => {
     res.render("main", { question: questionResult, feedback: feedbackResult });
 });
 
+app.put("/update", async (req, res) => {
+    const { id, isChecked } = req.body;
+    await Question.updateOne({ _id: id }, { $set: { status: isChecked } });
+    res.end();
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("server is listening on port: " + port);
