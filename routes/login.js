@@ -12,6 +12,7 @@ app.get("/error", (req, res) => {
 app.post("/authenticate", (req, res) => {
     const { username, password } = req.body;
     if (username === "admin" && password === "admin") {
+        req.session.login = true;
         res.redirect("../main");
     } else {
         res.redirect("./error");
