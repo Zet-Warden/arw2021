@@ -11,45 +11,62 @@
             href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="../main.js" defer></script>
     </head>
     <body>
         <main class="container">
             <div class="table question">
-                <span class="th">Status</span>
-                <span class="th">Name</span>
-                <span class="th">Email</span>
-                <span class="th">Question</span>
-                <span class="th">Date</span>
+                <div class="row">
+                    <span class="th">Status</span>
+                    <span class="th">Name</span>
+                    <span class="th">Email</span>
+                    <span class="th">Question</span>
+                    <span class="th">Date</span>
+                </div>
 
                 {{#each question}}
-                    <span class="id" style="display: none">{{this._id}}</span>
-                    <span class="td"><input
-                            type="checkbox"
-                            name="status"
-                            id=""
-                            {{#if this.status}}checked{{/if}}
-                        /></span>
-                    <span class="td">{{this.name}}</span>
-                    <span class="td">{{this.email}}</span>
-                    <span class="td">{{this.question}}</span>
-                    <span class="td">{{dateToString this.timestamp}}</span>
+                    <div class="row content {{#if this.status}}disabled{{/if}}">
+                        <span class="id" style="display: none">{{this._id}}</span>
+                        <span class="td"><input
+                                type="checkbox"
+                                name="status"
+                                id=""
+                                {{#if this.status}}checked{{/if}}
+                            /></span>
+                        <span class="td">{{this.name}}</span>
+                        <span class="td">{{this.email}}</span>
+                        <span class="td">{{this.question}}</span>
+                        <span class="td">{{dateToString this.timestamp}}</span>      
+                    </div>
                 {{/each}}
             </div>
 
             <div class="table feedback">
-                <span class="th">Rating</span>
-                <span class="th">Bug</span>
-                <span class="th">Suggestion</span>
-                <span class="th">Compliment</span>
-                <span class="th">Date</span>
+                <div class="row">
+                    <span class="th">Status</span>
+                    <span class="th">Rating</span>
+                    <span class="th">Bug</span>
+                    <span class="th">Suggestion</span>
+                    <span class="th">Compliment</span>
+                    <span class="th">Date</span>
+                </div>
 
                 {{#each feedback}}
-                    <span class="td">{{this.rating}}</span>
-                    <span class="td">{{this.bug}}</span>
-                    <span class="td">{{this.suggestion}}</span>
-                    <span class="td">{{this.compliment}}</span>
-                    <span class="td">{{dateToString this.timestamp}}</span>
+                    <div class="row content {{#if this.status}}disabled{{/if}}">
+                        <span class="id" style="display: none">{{this._id}}</span>
+                            <span class="td"><input
+                                    type="checkbox"
+                                    name="status"
+                                    id=""
+                                    {{#if this.status}}checked{{/if}}
+                                /></span>
+                        <span class="td">{{this.rating}}</span>
+                        <span class="td">{{this.bug}}</span>
+                        <span class="td">{{this.suggestion}}</span>
+                        <span class="td">{{this.compliment}}</span>
+                        <span class="td">{{dateToString this.timestamp}}</span>
+                    </div>
                 {{/each}}
             </div>
         </main>
