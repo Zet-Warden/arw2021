@@ -77,7 +77,7 @@ nav {
 
 ul {
   padding: 1rem;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .container {
@@ -111,8 +111,10 @@ ul {
 }
 
 .btn {
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
