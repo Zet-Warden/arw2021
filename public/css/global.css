@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem;
+  padding: 0;
+  min-height: calc(100vh - 3rem);
+  background-color: #e6e7ee;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/*# sourceMappingURL=global.css.map */

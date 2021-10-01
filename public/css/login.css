@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem;
+  padding: 0;
+  min-height: calc(100vh - 3rem);
+  background-color: #e6e7ee;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem;
+  padding: 0;
+  min-height: calc(100vh - 3rem);
+  background-color: #e6e7ee;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  border: 1px solid #d1d9e6;
+  box-shadow: 15px 15px 20px #b8b9be, -15px -15px 20px #fff;
+}
+
+.btn {
+  cursor: pointer;
+  color: black;
+  font-family: inherit;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #d1d9e6;
+  box-shadow: 2px 2px 5px #b8b9be, -3px -3px 7px #fff;
+}
+
+.btn:hover {
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+
+.th {
+  font-weight: 700;
+}
+
+.row.disabled {
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+  opacity: 0.5;
+}
+
+.btn.active {
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+
+.invisible {
+  display: none !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+label {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #e6e7ee;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.error {
+  outline: 1px solid #a91e2c;
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=login.css.map */
