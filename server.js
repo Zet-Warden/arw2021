@@ -4,6 +4,7 @@ const login = require("./routes/login");
 const hbs = require("hbs");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const cors = require("cors");
 
 const Feedback = require("./model/feedback");
 const Question = require("./model/question");
@@ -27,6 +28,7 @@ app.use(
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(cors());
 app.use("/post", post);
 app.use("/login", login);
 

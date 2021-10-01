@@ -8,7 +8,6 @@ const app = express.Router();
 db.connect(process.env.DB_URI);
 
 app.post("/questions", (req, res) => {
-    res.set("Access-Control-Allow-Origin", "*");
     const result = new Question(req.body).save();
 
     result
